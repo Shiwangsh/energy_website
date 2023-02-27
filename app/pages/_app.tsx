@@ -21,7 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* create div with spacing */}
 
       <div className="m-2">
-        <Navbar />
         <Component {...pageProps} />
       </div>
 

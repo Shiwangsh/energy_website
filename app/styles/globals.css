@@ -16,6 +16,15 @@ body {
   scroll-behavior: smooth;
 }
 
+/* .example::-webkit-scrollbar {
+  display: none;
+
+} */
+
+.example {
+  box-shadow: 50px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
 .caption {
   z-index: 2;
   position: absolute;
@@ -40,11 +49,20 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* @layer components {
-  .caption {
-    @apply font-bold;
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
   }
-} */
+  .navbar-test {
+    @apply hidden w-full md:block md:w-auto;
+  }
+  /* .full-navbar {
+    @apply md:block md:w-auto md:bg-red-800 md:mt-0 md:translate-y-0;
+  } */
+  .mobile-navbar {
+    @apply bg-transparent w-full flex h-auto transition-all duration-200 ease-in-out;
+  }
+}
 
 .reveal {
   position: relative;

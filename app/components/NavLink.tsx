@@ -14,8 +14,8 @@ export default function NavLink({ href, children }: NavLinkProps) {
     <li
       className={
         isActive
-          ? 'transition-all duration-200 ease-in-out border-b-2 border-yatri-blue text-yatri-blue'
-          : 'text-white md:hover:bg-transparent md:border-0 md:hover:text-yatri-blue md:p-0'
+          ? 'transition-all duration-200 ease-in-out border-b-2 border-yatri-blue text-yatri-blue md:p-0 md:text-base text-xl p-2'
+          : 'md:hover:bg-transparent md:border-0 md:hover:text-yatri-blue md:p-0 md:text-base text-xl p-2'
       }
     >
       <Link
