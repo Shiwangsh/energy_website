@@ -8,6 +8,8 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
+import TitleSide from '@/components/TitleSide';
+import HeroTitle from '@/components/HeroTitle';
 
 const MemberPage = () => {
   useEffect(() => {
@@ -34,7 +36,16 @@ const MemberPage = () => {
           <h1 className="text-white text-6xl font-bold">Become a member</h1>
         </div>
       </div>
-      <section className="text-black reveal fade-bottom md:ml-20 md:flex md:items-start">
+      <TitleSide
+        title="Pricing & Plans"
+        subTitle="some text"
+        paragraph="We make freedom of travel possible. <br />
+            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
+            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
+            exceptional user experience."
+      />
+      {/* <section className="text-black reveal fade-bottom md:ml-20 md:flex md:items-start">
         <div className="flex md:items-start items-center flex-col md:w-80 md:h-80">
           <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Pricing & Plans</h1>
           <p className="italic">some text</p>
@@ -49,7 +60,7 @@ const MemberPage = () => {
             exceptional user experience.
           </p>
         </div>
-      </section>
+      </section> */}
       {/* */}
       <section className="text-black reveal fade-bottom  bg-[#F8F8F8] w-full">
         <div className="flex items-center justify-center text-center flex-col ">
@@ -82,9 +93,7 @@ const MemberPage = () => {
           </div>
         </div>
       </section>
-
       {/* banner  */}
-
       <section className="w-full md:h-[20rem] mt-20 reveal fade-bottom">
         <Image src={sectionImage1} alt="sectionImage1" className="w-full h-full object-cover brightness-50" />
         {/* reveal fade-right */}
@@ -105,24 +114,20 @@ const MemberPage = () => {
           </div>
         </div>
       </section>
-
-      <section className="text-black reveal fade-bottom">
-        <div className="flex items-center flex-col">
-          <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Locate Our Charging Station</h1>
-          <p className="italic">Find us</p>
-          <hr className="w-20 mt-2 border border-yatri-blue" />
-        </div>
-        <div className="mt-10 text-center">
-          <p>
-            We make freedom of travel possible. <br />
+      <HeroTitle
+        title="Locate Our Charging Station"
+        subTitle="Find Us"
+        paragraph=" We make freedom of travel possible. <br />
             Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+            <br/>
             Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience.
-          </p>
-        </div>
+            of 2022. 
+            <br/>
+            Ultimately, our aim is to continuously expand our partner network in all geographies to provide
+            exceptional user experience."
+      />
+      <section className="text-black reveal fade-bottom">
         <div className="flex items-center flex-col mt-10">
-          {/* <h1>HLLO WORLD</h1> */}
           <select
             name="city"
             id=""

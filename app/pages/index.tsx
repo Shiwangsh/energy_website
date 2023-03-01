@@ -13,6 +13,7 @@ import reveal from '../utils';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import { BsArrowRight } from 'react-icons/bs';
+import HeroTitle from '@/components/HeroTitle';
 
 export default function Home() {
   useEffect(() => {
@@ -28,7 +29,6 @@ export default function Home() {
   }, []);
 
   return (
-    // <PageLayout>
     <main>
       <div className="h-full w-full">
         <Navbar />
@@ -38,30 +38,26 @@ export default function Home() {
             <h1 className="text-white text-6xl font-bold">Travel Boldly</h1>
             <button
               type="button"
-              className="transition-all duration-200 ease-in-out hover:scale-110 text-white border border-white hover:bg-yatri-blue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-10 "
+              className="transition-all duration-200 ease-in-out hover:scale-110 text-white border border-white hover:bg-yatri-blue focus:outline-none rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-10 "
             >
               <span className="font-sm m-4">LEARN MORE</span>
             </button>
           </div>
         </div>
 
+        <HeroTitle
+          title="Helping elminate the barriers"
+          subTitle="to enable the inevitable"
+          paragraph="We make freedom of travel possible. <br />
+            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+            <br />
+            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
+            of 2022. <br />
+            Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional
+            user experience."
+        />
         <section className="text-black reveal fade-bottom">
-          <div className="flex items-center flex-col">
-            <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Helping elminate the barriers</h1>
-            <p className="italic">to enable the inevitable</p>
-            <hr className="w-20 mt-2 border border-yatri-blue" />
-          </div>
-          <div className="text-center leading-relaxed m-10">
-            <p>
-              We make freedom of travel possible. <br />
-              Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-              Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-              of 2022. <br />
-              Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-              exceptional user experience.
-            </p>
-          </div>
-          <div className="w-full h-60 mt-20">
+          <div className="w-full h-60 mt-10">
             <Image src={trees} alt="trees" className="w-full h-full object-cover brightness-50" />
 
             <div className="w-full -translate-y-[10rem] items-center text-center text-white flex justify-around">
@@ -81,13 +77,8 @@ export default function Home() {
           </div>
         </section>
 
+        <HeroTitle title="Learn more about charging" subTitle="with Yatri Energy" paragraph="" />
         <section className="text-black reveal fade-bottom">
-          <div className="flex items-center flex-col">
-            <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Learn more about charging</h1>
-            <p className="italic">with Yatri Energy</p>
-            <hr className="w-20 mt-2 border border-yatri-blue" />
-          </div>
-
           <div className="mt-2">
             <div className="w-full h-full flex md:flex-row flex-col items-center justify-center">
               <div className="text-center group">
@@ -173,25 +164,19 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <HeroTitle
+          title="Locate Our Charging Station"
+          subTitle="Find Us"
+          paragraph="We make freedom of travel possible. <br />
+            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+            <br />
+            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
+            of 2022. <br />
+            Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional
+            user experience."
+        />
         <section className="text-black reveal fade-bottom">
-          <div className="flex items-center flex-col">
-            <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Locate Our Charging Station</h1>
-            <p className="italic">Find us</p>
-            <hr className="w-20 mt-2 border border-yatri-blue" />
-          </div>
-          <div className="m-10 text-center leading-relaxed">
-            <p>
-              We make freedom of travel possible. <br />
-              Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-              Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-              of 2022. <br />
-              Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-              exceptional user experience.
-            </p>
-          </div>
           <div className="flex items-center flex-col mt-10">
-            {/* <h1>HLLO WORLD</h1> */}
             <select
               name="city"
               id=""
@@ -207,6 +192,5 @@ export default function Home() {
         <Footer />
       </div>
     </main>
-    // </PageLayout>
   );
 }

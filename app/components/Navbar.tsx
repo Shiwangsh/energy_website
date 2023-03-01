@@ -5,7 +5,6 @@ import logo from '../public/assets/images/Yatri-energy-logo-secondary.png';
 import { useState } from 'react';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(true);
-  console.log(showMenu);
 
   return (
     <div className="absolute px-2 py-2.5 rounded w-full text-white z-10">
@@ -31,11 +30,10 @@ const Navbar = () => {
             <path
               fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
-        {/* w-full md:block md:w-auto md:visible hidden  */}
         <div
           className={
             showMenu
@@ -50,14 +48,6 @@ const Navbar = () => {
             <NavLink href="/energy-app">Mobile App</NavLink>
             <NavLink href="/host-a-charger">Host</NavLink>
           </ul>
-
-          {/* <ul className="md:flex md:p-4 md:space-x-8 md:mt-0 md:text-xl md:font-medium font-thin"> */}
-
-          {/* <NavLink href="/">Overview</NavLink>
-            <NavLink href="/pricing">Pricing</NavLink>
-            <NavLink href="/energy-app">Mobile App</NavLink>
-            <NavLink href="/host-a-charger">Host</NavLink>
-          </ul> */}
         </div>
       </div>
     </div>

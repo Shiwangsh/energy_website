@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import reveal from '../../utils';
 import { useEffect } from 'react';
+import TitleSide from '@/components/TitleSide';
 
 const MobileAppPage = () => {
   useEffect(() => {
@@ -33,19 +34,12 @@ const MobileAppPage = () => {
           <h1 className="text-white text-6xl font-bold">Yatri Energy App</h1>
         </div>
       </div>
-
-      <section className="text-black reveal fade-bottom md:ml-20 md:flex md:items-start">
-        <div className="flex md:items-start items-center flex-col md:w-80 md:h-80">
-          <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Discover Yatri Energy App</h1>
-          <hr className="w-20 mt-2 border border-yatri-blue" />
-        </div>
-        <div className="md:mt-10 md:w-[30rem] md:m-20 m-10">
-          <p>
-            Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up
-            for an account to enjoy exclusive, members-only public charging features and pricing.
-          </p>
-        </div>
-      </section>
+      <TitleSide
+        title="Discover Yatri Energy App"
+        subTitle=""
+        paragraph=" Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up
+            for an account to enjoy exclusive, members-only public charging features and pricing."
+      />
 
       <section className="text-black reveal fade-bottom md:flex md:items-center">
         <div className="md:flex md:items-start md:flex-col md:w-[30rem] md:h-96 ">
@@ -56,7 +50,7 @@ const MobileAppPage = () => {
           />
         </div>
         <div className="mt-10 md:w-[30rem] md:m-20 md:pl-0 pl-10">
-          <h1 className="text-4xl font-bold mb-4 ">Discover yatri energy app</h1>
+          <h1 className="text-4xl font-bold mb-4">Discover yatri energy app</h1>
           <p>
             We make freedom of travel possible. <br />
             Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
@@ -138,7 +132,7 @@ const MobileAppPage = () => {
           </div>
         </div>
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
