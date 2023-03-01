@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import logo from '../../public/assets/images/Yatri-energy-logo-secondary.png';
 import Navbar from '@/components/Navbar';
+import HeroTitle from '@/components/HeroTitle';
 
 const PricingPage = () => {
   useEffect(() => {
@@ -85,25 +86,18 @@ const PricingPage = () => {
         </div>
       </div>
 
-      <section className="text-black reveal fade-bottom bg">
-        <div className="flex items-center flex-col">
-          <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Helping elminate the barriers</h1>
-          <p className="italic">to enable the inevitable</p>
-          <hr className="w-20 mt-2 border border-yatri-blue" />
-        </div>
-        <div className="text-center leading-relaxed m-10">
-          <p>
-            We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. <br />
-            Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional
-            user experience.
-          </p>
-        </div>
-      </section>
-
-      <section className="w-full h-[30rem] md:flex md:items-center md:justify-center mt-10 md:mb-10 reveal fade-bottom">
+      <HeroTitle
+        title="Helping elminate the barriers"
+        subTitle="to enable the inevitable"
+        paragraph=" We make freedom of travel possible. <br />
+        Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+        <br />
+        Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
+        2022. <br />
+        Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional user
+        experience."
+      />
+      <section className="w-full md:h-[30rem] md:flex md:items-center md:justify-center mt-10 md:mb-10 reveal fade-bottom">
         <div className="md:w-[30rem] md:h-[30rem] bg-[#1F1F1F]">
           <div className="flex items-center justify-center flex-col">
             <Image src={logo} alt="yatri logo" className="object-cover w-40 h-20" />

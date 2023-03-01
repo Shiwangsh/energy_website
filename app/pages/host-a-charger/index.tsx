@@ -31,7 +31,7 @@ const HostChargerPage = () => {
           <h1 className="text-white text-6xl font-bold">Host a charger</h1>
         </div>
       </div>
-      <section className="text-black bg-[#F8F8F8] w-full mt-10">
+      <section className="text-black bg-[#F8F8F8] w-full mt-10  reveal fade-bottom">
         <div className="flex-center flex-col">
           <h1 className="mb-2 font-black text-2xl leading-relaxed mt-10">Apply to Host </h1>
           <p>Fill out the from and we'll get back to you soon.</p>
@@ -47,24 +47,28 @@ const HostChargerPage = () => {
               type="text"
               id="base-input"
               className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              required
             />
             <label className="block mt-5 text-md font-medium">Phone Number</label>
             <input
               type="text"
               id="base-input"
               className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              required
             />
             <label className="block mt-5 text-sm font-medium">Email</label>
             <input
               type="text"
               id="base-input"
               className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              required
             />
             <label className="block mt-5 text-md font-medium">Company Name</label>
             <input
               type="text"
               id="base-input"
               className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              required
             />
             <label className="block mt-5 text-md font-medium">Property Type</label>
             <select
@@ -78,6 +82,7 @@ const HostChargerPage = () => {
               type="text"
               id="base-input"
               className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              required
             />
             <label className="block mt-5 text-md font-medium">Additional Comments</label>
             <textarea className="h-56 p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
