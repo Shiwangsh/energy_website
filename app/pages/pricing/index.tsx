@@ -26,7 +26,7 @@ const PricingPage = () => {
       <Image
         src={landingPageImage}
         alt="landing page image"
-        className="border rounded-xl w-full h-screen object-cover brightness-50"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
       />
       <div className="caption">
         <div className="caption-title">
@@ -89,13 +89,15 @@ const PricingPage = () => {
       <HeroTitle
         title="Helping elminate the barriers"
         subTitle="to enable the inevitable"
-        paragraph=" We make freedom of travel possible. <br />
-        Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-        <br />
-        Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
-        2022. <br />
-        Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional user
-        experience."
+        paragraph=<p>
+          We make freedom of travel possible. <br />
+          Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+          <br />
+          Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
+          2022. <br />
+          Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional
+          user experience.
+        </p>
       />
       <section className="w-full md:h-[30rem] md:flex md:items-center md:justify-center mt-10 md:mb-10 reveal fade-bottom">
         <div className="md:w-[30rem] md:h-[30rem] bg-[#1F1F1F]">

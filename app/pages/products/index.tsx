@@ -29,7 +29,7 @@ const ProductsPage = () => {
       <Image
         src={landingPageImage}
         alt="landing page image"
-        className="border rounded-xl w-full h-screen md:object-cover brightness-50"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
       />
       <div className="caption">
         <div className="caption-title">
@@ -40,11 +40,13 @@ const ProductsPage = () => {
       <TitleSide
         title="Helping elminate the barriers"
         subTitle="to enable the inevitable"
-        paragraph="We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience."
+        paragraph=<p>
+          We make freedom of travel possible. <br />
+          Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+          Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
+          2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
+          exceptional user experience.
+        </p>
       />
 
       <section className="text-black reveal fade-bottom md:ml-20 md:flex md:items-center md:justify-center md:h-[60rem]">
@@ -89,7 +91,7 @@ const ProductsPage = () => {
           <Image
             src={homeProduct2}
             alt="homeProduct2"
-            className="w-full h-[30rem] object-cover reveal fade-bottom border rounded-xl"
+            className="w-full h-[30rem] object-cover reveal fade-bottom rounded-xl p-2"
           />
           <div className="mt-10 md:w-[60rem] md:h-[20rem] text-center">
             <p>

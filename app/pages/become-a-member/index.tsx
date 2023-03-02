@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import reveal from '../../utils';
 import sectionImage1 from '../../public/assets/images/mobile-app-1.jpg';
 import map from '../../public/assets/images/map.jpg';
+import landingPageImage from '../../public/assets/images/charging.jpg';
 
 import { BsArrowRight } from 'react-icons/bs';
 
@@ -26,11 +27,11 @@ const MemberPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div
-        // src={landingPageImage}
-        // alt="landing page image"
-        className="border rounded-xl w-full h-screen md:object-cover brightness-50 bg-gradient-to-r from-cyan-500 to-blue-500"
-      ></div>
+      <Image
+        src={landingPageImage}
+        alt="landing page image"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
+      />
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Become a member</h1>
@@ -39,29 +40,15 @@ const MemberPage = () => {
       <TitleSide
         title="Pricing & Plans"
         subTitle="some text"
-        paragraph="We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience."
+        paragraph=<p>
+          We make freedom of travel possible. <br />
+          Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+          Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
+          2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
+          exceptional user experience.
+        </p>
       />
-      {/* <section className="text-black reveal fade-bottom md:ml-20 md:flex md:items-start">
-        <div className="flex md:items-start items-center flex-col md:w-80 md:h-80">
-          <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Pricing & Plans</h1>
-          <p className="italic">some text</p>
-          <hr className="w-20 mt-2 border border-yatri-blue" />
-        </div>
-        <div className="md:mt-10 md:w-[30rem] md:m-20 m-10">
-          <p>
-            We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience.
-          </p>
-        </div>
-      </section> */}
-      {/* */}
+
       <section className="text-black reveal fade-bottom  bg-[#F8F8F8] w-full">
         <div className="flex items-center justify-center text-center flex-col ">
           <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Our Plans</h1>
@@ -117,14 +104,16 @@ const MemberPage = () => {
       <HeroTitle
         title="Locate Our Charging Station"
         subTitle="Find Us"
-        paragraph=" We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            <br/>
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. 
-            <br/>
-            Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience."
+        paragraph=<p>
+          We make freedom of travel possible. <br />
+          Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+          <br />
+          Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
+          2022.
+          <br />
+          Ultimately, our aim is to continuously expand our partner network in all geographies to provide exceptional
+          user experience.
+        </p>
       />
       <section className="text-black reveal fade-bottom">
         <div className="flex items-center flex-col mt-10">

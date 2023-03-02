@@ -27,7 +27,7 @@ const MobileAppPage = () => {
       <Image
         src={landingPageImage}
         alt="landing page image"
-        className="border rounded-xl w-full h-screen md:object-fill brightness-50 object-cover"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
       />
       <div className="caption">
         <div className="caption-title">
@@ -37,8 +37,10 @@ const MobileAppPage = () => {
       <TitleSide
         title="Discover Yatri Energy App"
         subTitle=""
-        paragraph=" Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up
-            for an account to enjoy exclusive, members-only public charging features and pricing."
+        paragraph=<p>
+          Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up for
+          an account to enjoy exclusive, members-only public charging features and pricing.
+        </p>
       />
 
       <section className="text-black reveal fade-bottom md:flex md:items-center">

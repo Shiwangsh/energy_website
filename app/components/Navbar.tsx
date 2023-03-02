@@ -7,9 +7,9 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(true);
 
   return (
-    <div className="absolute px-2 py-2.5 rounded w-full text-white z-10">
+    <div className="absolute mt-6 px-2 py-2.5 rounded w-full text-white z-10">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <div className="flex items-center cursor-pointer h-10">
+        <div className="flex items-center cursor-pointer h-10 ml-10">
           <Link href="/">
             <Image src={logo} alt="Yatri Logo" width={200} height={50} />
           </Link>
@@ -42,11 +42,17 @@ const Navbar = () => {
           }
           id="navbar-default"
         >
-          <ul className="md:flex md:p-4 md:space-x-8 md:mt-0 md:text-xl md:font-medium font-thin">
+          <ul className="md:flex md:p-4 md:space-x-8 md:mt-0 md:text-xl md:font-medium font-thin md:mr-10">
             <NavLink href="/">Overview</NavLink>
             <NavLink href="/pricing">Pricing</NavLink>
             <NavLink href="/energy-app">Mobile App</NavLink>
-            <NavLink href="/host-a-charger">Host</NavLink>
+            {/* <NavLink href="/host-a-charger">Host</NavLink> */}
+            <Link
+              href="/host-a-charger"
+              className="md:rounded-xl md:bg-yatri-blue p-2  md:border-0  md:p-0 md:text-base text-xl md:w-20 text-center"
+            >
+              Host
+            </Link>
           </ul>
         </div>
       </div>

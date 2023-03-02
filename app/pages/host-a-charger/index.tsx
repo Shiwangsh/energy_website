@@ -24,7 +24,7 @@ const HostChargerPage = () => {
       <Image
         src={landingPageImage}
         alt="landing page image"
-        className="border rounded-xl w-full h-screen object-cover brightness-50"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
       />
       <div className="caption">
         <div className="caption-title">
