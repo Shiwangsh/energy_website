@@ -15,8 +15,14 @@ import Footer from '@/components/Footer';
 import { BsArrowRight } from 'react-icons/bs';
 import HeroTitle from '@/components/HeroTitle';
 import NumberCounter from '@/components/NumberCounter';
+import { useInView } from 'react-intersection-observer';
 
 export default function Home() {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       addEventListener('scroll', reveal);
@@ -58,26 +64,20 @@ export default function Home() {
           user experience.
         </p>
       />
-      <section className="text-black reveal fade-bottom mt-20">
+      <section className="text-black reveal fade-bottom mt-20" ref={ref}>
         <div className="w-full h-60">
           <Image src={trees} alt="trees" className="w-full h-full p-2 object-cover brightness-50" />
           <div className="w-full -translate-y-[10rem] items-center text-center text-white flex justify-around">
-            <div className="">
-              <h1 className="font-normal text-5xl  mb-2 flex">
-                <NumberCounter n={20} />+
-              </h1>
+            <div>
+              <h1 className="font-normal text-5xl  mb-2 flex">{inView ? <NumberCounter n={20} /> : null}+</h1>
               <p>Fast Chargers</p>
             </div>
-            <div className="">
-              <h3 className="font-normal text-5xl  mb-2 flex">
-                <NumberCounter n={40} />+
-              </h3>
+            <div>
+              <h3 className="font-normal text-5xl  mb-2 flex">{inView ? <NumberCounter n={40} /> : null}+</h3>
               <p>AC Chargers</p>
             </div>
-            <div className="">
-              <h3 className="font-normal text-5xl mb-2 flex ">
-                <NumberCounter n={15} />+
-              </h3>
+            <div>
+              <h3 className="font-normal text-5xl mb-2 flex ">{inView ? <NumberCounter n={15} /> : null}+</h3>
               <p>Stations</p>
             </div>
           </div>
