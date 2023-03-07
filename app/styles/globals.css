@@ -21,10 +21,6 @@ body {
 
 } */
 
-.example {
-  box-shadow: 50px 60px -15px rgba(0, 0, 0, 0.3);
-}
-
 .caption {
   z-index: 2;
   position: absolute;

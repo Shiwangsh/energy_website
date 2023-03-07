@@ -32,8 +32,8 @@ const HostChargerPage = () => {
         </div>
       </div>
       <section className="text-black bg-[#F8F8F8] w-full mt-10  reveal fade-bottom">
-        <div className="flex-center flex-col">
-          <h1 className="mb-2 font-black text-2xl leading-relaxed mt-10">Apply to Host </h1>
+        <div className="flex items-center flex-col w-full">
+          <h1 className="mb-2 font-black text-2xl leading-relaxed">Apply to Host </h1>
           <p>Fill out the from and we'll get back to you soon.</p>
 
           <hr className="w-96 mt-2 border border-yatri-blue" />
@@ -41,7 +41,7 @@ const HostChargerPage = () => {
 
         {/* form div  */}
         <div className="flex-center">
-          <form className="md:w-96 p-5 ">
+          <form className="md:w-[60rem] p-5 ">
             <label className="block mt-5 text-md font-medium ">Name</label>
             <input
               type="text"
@@ -85,7 +85,7 @@ const HostChargerPage = () => {
               required
             />
             <label className="block mt-5 text-md font-medium">Additional Comments</label>
-            <textarea className="h-56 p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
+            <textarea className="h-36 p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
 
             <div className="flex items-center h-5 mt-6">
               <input

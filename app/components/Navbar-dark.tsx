@@ -47,7 +47,13 @@ const Navbar = () => {
             <NavLink href="/">Overview</NavLink>
             <NavLink href="/pricing">Pricing</NavLink>
             <NavLink href="/energy-app">Mobile App</NavLink>
-            <NavLink href="/host-a-charger">Host</NavLink>
+            {/* <NavLink href="/host-a-charger">Host</NavLink> */}
+            <Link
+              href="/host-a-charger"
+              className="md:rounded-xl md:bg-yatri-blue p-2  md:border-0  md:p-0 md:text-base text-xl md:w-20 text-center"
+            >
+              Host
+            </Link>
           </ul>
         </div>
       </div>

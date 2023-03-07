@@ -2,6 +2,8 @@
 import reveal from '../../utils';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import landingPageImage from '../../public/assets/images/home-product-1.jpg';
 import { BsArrowRight } from 'react-icons/bs';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -21,11 +23,11 @@ const SupportPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div
-        // src={landingPageImage}
-        // alt="landing page image"
-        className="border rounded-xl w-full h-screen md:object-cover brightness-50 bg-gradient-to-r from-cyan-500 to-yatri-blue"
-      ></div>
+      <Image
+        src={landingPageImage}
+        alt="landing page image"
+        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
+      />
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Support & Troubleshooting</h1>
@@ -68,14 +70,15 @@ const SupportPage = () => {
 
       {/* form section  */}
       <section className="text-black bg-[#F8F8F8] w-full mt-10">
-        <div className="flex-center flex-col mt-10">
+        <div className="md:w-[60rem] flex-center flex-col mt-10">
           <h1 className="mb-2 font-black text-2xl leading-relaxed">Don't see what you're looking for? </h1>
-          <p>Fill out the from and we'll get back to you soon.</p>
+          <p className="leading-relaxed">Fill out the from and we'll get back to you soon.</p>
 
           <hr className="w-96 mt-2 border border-yatri-blue" />
         </div>
+        {/* md:ml-96 md:mr-96 */}
         <div className="flex-center">
-          <form className="md:w-96 w-full p-5 ">
+          <form className=" w-full md:w-[60rem] p-5 ">
             <label className="block mt-5 text-md font-medium ">Name</label>
             <input
               type="text"
@@ -95,7 +98,7 @@ const SupportPage = () => {
               className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
             />
             <label className="block mt-5 text-md font-medium ">How can we help you?</label>
-            <textarea className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
+            <textarea className="w-full h-36 p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
             <button className="bg-yatri-blue w-[15rem] h-14 mt-4 font-bold text-lg text-white">Submit</button>
           </form>
         </div>
