@@ -14,19 +14,19 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex md:space-x-6 space-x-10 text-white items-center md:justify-evenly w-full">
-            <Link href="/" className="hover:text-yatri-blue">
+            <Link href="https://www.youtube.com/channel/UCobm2KxuXOFnM-fGLgSDn5A" className="hover:text-yatri-blue">
               <BsYoutube />
             </Link>
-            <Link href="/" className="hover:text-yatri-blue">
+            <Link href="https://www.instagram.com/yatrimotorcycles/" className="hover:text-yatri-blue">
               <BsInstagram />
             </Link>
-            <Link href="/" className="hover:text-yatri-blue">
+            <Link href="https://twitter.com/YATRIdesign" className="hover:text-yatri-blue">
               <BsTwitter />
             </Link>
-            <Link href="/" className="hover:text-yatri-blue">
+            <Link href="https://www.linkedin.com/company/yatrimotorcycles/mycompany/" className="hover:text-yatri-blue">
               <BsLinkedin />
             </Link>
-            <Link href="/" className="hover:text-yatri-blue">
+            <Link href="https://www.facebook.com/YATRImotorcycles" className="hover:text-yatri-blue">
               <BsFacebook />
             </Link>
           </div>

@@ -1,4 +1,3 @@
-import landingPageImage from '../../public/assets/images/landingPage.jpg';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import reveal from '../../utils';
@@ -23,11 +22,7 @@ const PricingPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <Image
-        src={landingPageImage}
-        alt="landing page image"
-        className="p-2 rounded-2xl w-full h-screen object-cover brightness-50"
-      />
+      <div className="parallax m-2 bg-[url('../public/assets/images/landingPage.jpg')] brightness-50"></div>
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">

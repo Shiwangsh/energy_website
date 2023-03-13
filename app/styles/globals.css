@@ -20,6 +20,13 @@ body {
   display: none;
 
 } */
+.parallax {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .caption {
   z-index: 2;
@@ -107,3 +114,15 @@ body {
     opacity: 1;
   }
 }
+/* @keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style='in:circle:center'] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+} */

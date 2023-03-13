@@ -38,7 +38,8 @@ export default function Home() {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <Image src={landingPageImage} alt="landing page image" className="p-2 rounded-2xl h-screen object-cover" />
+      <div className="parallax m-2 bg-[url('../public/assets/images/charging.jpg')]"></div>
+      {/* <Image src={landingPageImage} alt="landing page image" className="p-2 rounded-2xl h-screen object-cover" /> */}
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Travel Boldly</h1>
@@ -50,7 +51,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
       <HeroTitle
         title="Helping elminate the barriers"
         subTitle="to enable the inevitable"
@@ -83,7 +83,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <HeroTitle title="Learn more about charging" subTitle="with Yatri Energy" paragraph="" />
       <section className="text-black reveal fade-bottom mt-20">
         {/* <div className="bg-red-200"> */}
