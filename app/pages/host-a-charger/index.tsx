@@ -19,55 +19,55 @@ const HostChargerPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/home-product-1.jpg')] brightness-50"></div>
+      <div className="parallax m-2 bg-[url('../public/assets/images/home-product-1.jpg')] brightness-50 rounded-lg"></div>
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Host a charger</h1>
         </div>
       </div>
-      <section className="text-black bg-[#F8F8F8] w-full mt-10  reveal fade-bottom">
-        <div className="flex items-center flex-col w-full">
-          <h1 className="mb-2 font-black text-2xl leading-relaxed">Apply to Host </h1>
-          <p>Fill out the from and we'll get back to you soon.</p>
+      <section className="text-black bg-[#F8F8F8] m-2 reveal fade-bottom rounded-lg">
+        <div className="md:flex-center md:flex-col  ml-10 overflow-hidden">
+          <h1 className="mt-20 md:w-[40rem] font-black text-2xl leading-relaxed">Apply to Host</h1>
+          <p className="md:w-[40rem]">Fill out the from and we'll get back to you soon.</p>
 
-          <hr className="w-96 mt-2 border border-yatri-blue" />
+          <hr className="w-[40rem] mt-2 border border-yatri-blue" />
         </div>
 
         {/* form div  */}
-        <div className="flex-center">
-          <form className="md:w-[60rem] p-5 ">
+        <div className="md:flex-center ml-10 overflow-hidden">
+          <form className="md:w-[40rem] w-full m-2">
             <label className="block mt-5 text-md font-medium ">Name</label>
             <input
               type="text"
               id="base-input"
-              className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="md:w-full w-[90%] p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
               required
             />
             <label className="block mt-5 text-md font-medium">Phone Number</label>
             <input
               type="text"
               id="base-input"
-              className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
               required
             />
             <label className="block mt-5 text-sm font-medium">Email</label>
             <input
               type="text"
               id="base-input"
-              className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
               required
             />
             <label className="block mt-5 text-md font-medium">Company Name</label>
             <input
               type="text"
               id="base-input"
-              className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
               required
             />
             <label className="block mt-5 text-md font-medium">Property Type</label>
             <select
               id="base-input"
-              className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
             >
               <option value="">Please select one</option>
             </select>
@@ -75,11 +75,11 @@ const HostChargerPage = () => {
             <input
               type="text"
               id="base-input"
-              className="p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
               required
             />
             <label className="block mt-5 text-md font-medium">Additional Comments</label>
-            <textarea className="h-36 p-2.5 w-full focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
+            <textarea className="h-36 p-2.5 md:w-full w-[90%] focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md" />
 
             <div className="flex items-center h-5 mt-6">
               <input
@@ -91,7 +91,7 @@ const HostChargerPage = () => {
               />
 
               <label htmlFor="terms" className="text-sm font-medium text-gray-900 ">
-                I understand and agree with to{' '}
+                I understand and agree to{' '}
                 <a href="#" className="underline hover:text-yatri-blue">
                   Yatri's Privacy Notice
                 </a>
@@ -102,7 +102,7 @@ const HostChargerPage = () => {
               </label>
             </div>
 
-            <button className="bg-yatri-blue w-[15rem] h-14 mt-8 font-bold text-lg text-white">Submit</button>
+            <button className="bg-yatri-blue w-[15rem] h-14 mt-8 mb-8 font-bold text-lg text-white">Submit</button>
           </form>
         </div>
       </section>

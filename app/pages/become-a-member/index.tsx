@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import TitleSide from '@/components/TitleSide';
 import HeroTitle from '@/components/HeroTitle';
+import FAQ from '@/components/Faqs';
 
 const MemberPage = () => {
   useEffect(() => {
@@ -25,8 +26,7 @@ const MemberPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/charging.jpg')] brightness-50"></div>
-
+      <div className="parallax m-2 bg-[url('../public/assets/images/charging.jpg')] brightness-50 rounded-lg"></div>
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Become a member</h1>
@@ -36,14 +36,10 @@ const MemberPage = () => {
         title="Pricing & Plans"
         subTitle="some text"
         paragraph=<p>
-          We make freedom of travel possible. <br />
-          Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-          Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end of
-          2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-          exceptional user experience.
+          Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up for
+          an account to enjoy exclusive, members-only public charging features and pricing.
         </p>
       />
-
       <section className="text-black reveal fade-bottom  bg-[#F8F8F8] w-full">
         <div className="flex items-center justify-center text-center flex-col ">
           <h1 className="mt-10 mb-2 font-black text-2xl leading-relaxed">Our Plans</h1>
@@ -76,22 +72,20 @@ const MemberPage = () => {
         </div>
       </section>
       {/* banner  */}
-      <section className="w-full md:h-[20rem] mt-20 reveal fade-bottom">
-        <Image src={sectionImage1} alt="sectionImage1" className="w-full h-full object-cover brightness-50" />
-        {/* reveal fade-right */}
-        <div className="w-full md:-translate-y-[15rem] md:text-white ">
-          <div className="md:h-[10rem] reveal fade-right md:font-bold ">
-            <h1 className="font-bold text-2xl leading-relaxed text-center">Get premium offers in the app</h1>
-            <p className="text-md leading-relaxed text-center">
+      <section className="w-full md:h-[20rem] mt-20 reveal fade-bottom flex-center">
+        <div className="w-[90%] md:h-[25rem] brightness-[.75] bg-cover rounded-lg bg-[url('../public/assets/images/trees.jpg')] flex justify-end">
+          <div className="p-6 md:w-[40rem]  float-right text-white md:font-bold mt-6">
+            <h1 className="font-bold text-4xl leading-relaxed text-start text-white">Get premium offers in the app</h1>
+            <p className="text-md leading-relaxed text-justify mt-10">
               We make freedom of travel possible. <br />
               Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
               Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
               of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
               exceptional user experience.
             </p>
-            <a href="#" className="text-center text-yatri-blue flex items-center justify-center font-bold">
+            <a href="#" className="text-start text-yatri-blue flex font-bold">
               Get the app
-              <BsArrowRight className="m-2" />
+              <BsArrowRight className="m-2 " />
             </a>
           </div>
         </div>
@@ -124,6 +118,7 @@ const MemberPage = () => {
           </div>
         </div>
       </section>
+      <FAQ />
       <Footer />
     </div>
   );

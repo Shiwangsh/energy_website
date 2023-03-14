@@ -37,9 +37,9 @@ const MobileAppPage = () => {
     };
   }, []);
   return (
-    <div className="h-full w-full">
+    <div className="container">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/mobile-app-banner.jpg')] brightness-50"></div>
+      <div className="parallax m-2 bg-[url('../public/assets/images/mobile-app-banner.jpg')] brightness-50 rounded-md"></div>
 
       <div className="caption">
         <div className="caption-title">

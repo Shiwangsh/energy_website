@@ -24,7 +24,7 @@ const GreenCityPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/1.jpg')] brightness-50"></div>
+      <div className="parallax m-2 bg-[url('../public/assets/images/1.jpg')] brightness-50 rounded-lg"></div>
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Our Green City</h1>

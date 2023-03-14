@@ -38,16 +38,16 @@ export default function Home() {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/charging.jpg')]"></div>
+      <div className="parallax m-2 bg-[url('../public/assets/images/charging.jpg')] rounded-lg"></div>
       {/* <Image src={landingPageImage} alt="landing page image" className="p-2 rounded-2xl h-screen object-cover" /> */}
       <div className="caption">
         <div className="caption-title">
-          <h1 className="text-white text-6xl font-bold">Travel Boldly</h1>
+          <h1 className="text-white text-8xl font-bold">Travel Boldly</h1>
           <button
             type="button"
-            className="transition-all duration-200 ease-in-out hover:scale-110 text-white border border-white hover:bg-yatri-blue focus:outline-none rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-10 "
+            className="transition-all duration-200 ease-in-out hover:scale-110 text-white border border-white hover:bg-yatri-blue focus:outline-none rounded-full px-5 py-2.5 text-center mr-2 mb-2 mt-10 "
           >
-            <span className="font-sm m-4">LEARN MORE</span>
+            <span className="font-2xl m-4">LEARN MORE</span>
           </button>
         </div>
       </div>

@@ -20,15 +20,13 @@ const SupportPage = () => {
   return (
     <div className="h-full w-full">
       <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/home-product-1.jpg')] brightness-50"></div>
-
+      <div className="parallax m-2 bg-[url('../public/assets/images/home-product-1.jpg')] brightness-50 rounded-lg"></div>
       <div className="caption">
         <div className="caption-title">
           <h1 className="text-white text-6xl font-bold">Support & Troubleshooting</h1>
         </div>
       </div>
-      {/* reveal fade-bottom  */}
-      <section className="text-black md:ml-20 md:flex md:items-start md:flex-col">
+      <section className="text-black md:ml-20 md:flex md:items-start md:flex-col  reveal fade-bottom ">
         <div className="flex md:items-start items-center flex-col md:w-80 mt-10">
           <h1 className="mb-2 font-black text-2xl leading-relaxed">Guides</h1>
           <hr className="w-20 mt-2 border border-yatri-blue" />
@@ -48,10 +46,7 @@ const SupportPage = () => {
           </Link>
         </div>
       </section>
-
-      {/* Second section  */}
-
-      <section className="text-black md:ml-20 md:flex md:items-start md:flex-col">
+      <section className="text-black md:ml-20 md:flex md:items-start md:flex-col  reveal fade-bottom ">
         <div className="flex md:items-start items-center flex-col md:w-80 mt-10">
           <h1 className="mb-2 font-black text-2xl leading-relaxed">Get help now</h1>
           <hr className="w-20 mt-2 border border-yatri-blue" />
@@ -61,39 +56,39 @@ const SupportPage = () => {
           <p>24 hours a day / 7 days a week</p>
         </div>
       </section>
-
       {/* form section  */}
-      <section className="text-black bg-[#F8F8F8] w-full mt-10">
-        <div className="md:w-[60rem] flex-center flex-col mt-10">
-          <h1 className="mb-2 font-black text-2xl leading-relaxed">Don't see what you're looking for? </h1>
-          <p className="leading-relaxed">Fill out the from and we'll get back to you soon.</p>
 
-          <hr className="w-96 mt-2 border border-yatri-blue" />
+      <section className="text-black bg-[#F8F8F8] m-2 reveal fade-bottom rounded-lg">
+        <div className="md:flex-center md:flex-col  ml-10 overflow-hidden">
+          <h1 className="mt-10 md:w-[40rem] font-black text-2xl leading-relaxed">Don't see what you're looking for?</h1>
+          <p className="md:w-[40rem]">Fill out the from and we'll get back to you soon.</p>
+
+          <hr className="w-[40rem] mt-2 border border-yatri-blue" />
         </div>
         {/* md:ml-96 md:mr-96 */}
-        <div className="flex-center">
-          <form className=" w-full md:w-[60rem] p-5 ">
-            <label className="block mt-5 text-md font-medium ">Name</label>
+        <div className="md:flex-center ml-10 overflow-hidden">
+          <form className=" md:w-[40rem] w-full m-2 ">
+            <label className="block mt-5 text-md font-medium">Name</label>
             <input
               type="text"
               id="base-input"
-              className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="md:w-full w-[90%] p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
             />
             <label className="block mt-5 text-md font-medium">Email</label>
             <input
               type="text"
               id="base-input"
-              className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="md:w-full w-[90%] p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
             />
             <label className="block mt-5 text-md font-medium ">Phone</label>
             <input
               type="text"
               id="base-input"
-              className="w-full p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out"
+              className="md:w-full w-[90%] p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md"
             />
             <label className="block mt-5 text-md font-medium ">How can we help you?</label>
-            <textarea className="w-full h-36 p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out" />
-            <button className="bg-yatri-blue w-[15rem] h-14 mt-4 font-bold text-lg text-white">Submit</button>
+            <textarea className="md:w-full w-[90%] p-2.5 focus:outline-yatri-blue outline-none duration-300 ease-in-out rounded-md" />
+            <button className="bg-yatri-blue w-[15rem] h-14 mt-8 mb-8 font-bold text-lg text-white">Submit</button>
           </form>
         </div>
       </section>

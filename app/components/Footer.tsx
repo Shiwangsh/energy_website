@@ -5,15 +5,15 @@ import logo from '../public/assets/images/Yatri-energy-logo-secondary.png';
 
 const Footer = () => {
   return (
-    <footer className="mt-10 w-full h-auto bg-black border-8 rounded-2xl border-white">
-      <div className="md:flex md:justify-evenly md:w-full h-full md:mt-10 md:ml-0 ml-6">
-        <div className="h-40">
-          <div className="md:flex-center">
+    <footer className="mt-10 w-full bg-black border-8 rounded-2xl border-white overflow-hidden reveal fade-bottom">
+      <div className="md:flex md:items-start md:justify-evenly footer-container ">
+        <div className="h-full -translate-y-12 md:w-56 ">
+          <div className="">
             <Link href="/">
-              <Image src={logo} className="w-44 h-full object-cover" alt="Yatri Energy Logo" />
+              <Image src={logo} className="w-32 h-full object-fill " alt="Yatri Energy Logo" />
             </Link>
           </div>
-          <div className="flex md:space-x-6 space-x-10 text-white items-center md:justify-evenly w-full">
+          <div className="flex w-32 space-x-6 text-xs text-white items-center md:justify-evenly ">
             <Link href="https://www.youtube.com/channel/UCobm2KxuXOFnM-fGLgSDn5A" className="hover:text-yatri-blue">
               <BsYoutube />
             </Link>
@@ -32,17 +32,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="h-full md:w-56 w-full md:m-0 mt-20 text-sm">
-          <h2 className="mb-4 text-md font-semibold uppercase text-white">Resources</h2>
-          <ul className="text-gray-400">
-            <li className="mb-4">
+        <div className="h-full md:w-56 w-full md:mt-0 mt-10  text-start">
+          <ul className="text-white text-base font-medium">
+            <li className="mb-4 ">
               <Link href="/host-a-charger" className="hover:underline">
                 Host a Charger
-              </Link>
-            </li>
-            <li className="mb-4">
-              <Link href="/energy-app" className="hover:underline">
-                Mobile App
               </Link>
             </li>
             <li className="mb-4">
@@ -51,50 +45,78 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-4">
+              <Link href="/become-a-member" className="hover:underline">
+                Become a Member
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="h-full md:w-56 w-full md:mt-0 mt-10 text-start">
+          <ul className="text-white text-base font-medium">
+            <li className="mb-4">
+              <Link href="/energy-app" className="hover:underline">
+                Mobile App
+              </Link>
+            </li>
+            <li className="mb-4">
               <Link href="/products" className="hover:underline">
                 Home Products
               </Link>
             </li>
             <li className="mb-4">
-              <Link href="/become-a-member" className="hover:underline">
-                Become a Member
+              <Link href="/green-city" className="hover:underline">
+                Our Green City
               </Link>
             </li>
             <li className="mb-4">
-              <Link href="/support" className="hover:underline">
-                Support and Troubleshooting
-              </Link>
-            </li>
-            <li>
-              <Link href="/green-city" className="hover:underline">
-                Our Green City
+              <Link href="/mission" className="hover:underline">
+                Our Mission
               </Link>
             </li>
           </ul>
         </div>
 
-        <div className="h-full md:w-56 w-full md:mt-0 mt-10 text-sm">
-          <ul className="text-gray-400">
+        <div className="h-full md:w-56 w-full md:mt-0 mt-10 text-sm text-start">
+          <ul className="text-white">
             <li className="mb-4">
-              <Link href="/mission" className="hover:underline font-semibold text-white">
-                Our Mission
+              <Link href="/privacy" className="hover:underline">
+                Privacy
               </Link>
             </li>
             <li className="mb-4">
-              <Link href="/contact" className="hover:underline font-semibold text-white">
+              <Link href="/terms-of-use" className="hover:underline ">
+                Terms of use
+              </Link>
+            </li>
+            <li className="mb-4">
+              <Link href="/support" className="hover:underline ">
+                Help and support
+              </Link>
+            </li>
+            <li className="mb-4">
+              <Link href="/contact" className="hover:underline text-white text-base font-medium">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:underline font-semibold text-white ">
+              <Link href="/become-a-member#faqs" className="hover:underline text-base font-medium text-white ">
                 FAQs
               </Link>
             </li>
           </ul>
         </div>
+      </div>
+      <hr className="md:w-[75rem] my-2 mx-auto border border-gray-700 " />
+      <span className="text-sm text-white flex-center w-full my-6">
+        <Link href="https://yatrimotorcycles.com/" className="hover:underline">
+          Yatri Energy
+        </Link>
+        © 2023
+      </span>
 
-        {/* NewsLetter  */}
-        <div className="h-full md:w-[30rem] w-full md:mt-0 mt-10">
+      {/* NewsLetter  */}
+      {/* <div className="h-full md:w-[30rem] w-full md:mt-0 mt-10">
           <h2 className="mb-6 text-sm font-semibold uppercase text-white">Get our Newsletter</h2>
           <p className="mb-6 text-xs text-white">
             Be the first to receive the latest Yatri Motorcycles news, events and product updates and more.
@@ -109,27 +131,26 @@ const Footer = () => {
               Subscribe
             </button>
           </div>
-        </div>
-      </div>
+        </div> */}
 
       {/* mobile footer bottom links */}
-      <div className="flex-center justify-evenly mt-4 text-sm w-full">
-        <Link href="#" className="hover:underline text-gray-400 md:w-[25%]">
+      {/* <div className="flex-center justify-evenly mt-4 text-sm w-full">
+        <Link href="#" className="hover:underline text-white md:w-[25%]">
           Privacy
         </Link>
-        <Link href="#" className="hover:underline text-gray-400 md:w-[25%]">
+        <Link href="#" className="hover:underline text-white md:w-[25%]">
           Terms of use
         </Link>
-        <Link href="#" className="hover:underline text-gray-400 md:w-[25%]">
+        <Link href="#" className="hover:underline text-white md:w-[25%]">
           Support 123456789
         </Link>
       </div>
-      <span className="text-sm text-gray-400 flex-center w-full mt-6">
+      <span className="text-sm text-white flex-center w-full mt-6">
         <Link href="https://yatrimotorcycles.com/" className="hover:underline">
           Yatri Energy
         </Link>{' '}
         © 2023
-      </span>
+      </span> */}
     </footer>
   );
 };
