@@ -1,28 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
-import sectionImage1 from '../../public/assets/images/mobile-app-1.jpg';
-import sectionImage2 from '../../public/assets/images/mobile-app-2.jpg';
-import mobileTemplate1 from '../../public/assets/images/mobile-template1.png';
-import mobileTemplate2 from '../../public/assets/images/mobile-template2.png';
-import mobileSingle from '../../public/assets/images/mobile-single1.jpg';
+import appScreenshot1 from '../../public/assets/images/app-screenshot1.png';
+import appScreenshot2 from '../../public/assets/images/app-screenshot2.png';
+import transparentIphone from '../../public/assets/images/iphone.png';
 
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import reveal from '../../utils';
-import { useEffect } from 'react';
-import TitleSide from '@/components/TitleSide';
+import { useEffect, useState } from 'react';
 import 'transition-style';
 import { useInView } from 'react-intersection-observer';
 
 const MobileAppPage = () => {
-  const { ref, inView } = useInView({
+  const [ref, inView] = useInView({
     threshold: 0,
-    // triggerOnce: true,
+    triggerOnce: true,
   });
 
-  const ref2 = useInView({
+  const [ref2, inView2] = useInView({
     threshold: 0,
-    // triggerOnce: true,
+    triggerOnce: true,
+  });
+
+  const [ref3, inView3] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref4, inView4] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref5, inView5] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref6, inView6] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref7, inView7] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref8, inView8] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [ref9, inView9] = useInView({
+    threshold: 0,
+    triggerOnce: true,
   });
 
   useEffect(() => {
@@ -36,72 +62,100 @@ const MobileAppPage = () => {
       }
     };
   }, []);
-  return (
-    <div className="container">
-      <Navbar />
-      <div className="parallax m-2 bg-[url('../public/assets/images/mobile-app-banner.jpg')] brightness-50 rounded-md"></div>
 
-      <div className="caption">
-        <div className="caption-title">
-          <h1 className="text-white text-6xl font-bold">Yatri Energy App</h1>
+  const images = [appScreenshot1, appScreenshot2];
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (currentIndex === images.length - 1) {
+        setCurrentIndex(0);
+      } else {
+        setCurrentIndex(currentIndex + 1);
+      }
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [currentIndex, images.length]);
+
+  return (
+    <>
+      <div className="h-full w-full ">
+        <Navbar />
+        <div className="parallax m-2 bg-[url('../public/assets/images/mobile-single1.jpg')] brightness-50 rounded-md"></div>
+        <div className="caption">
+          <div className="caption-title">
+            <h1 className="text-white text-6xl font-bold">Yatri Energy App</h1>
+          </div>
         </div>
       </div>
-      <TitleSide
-        title="Discover Yatri Energy App"
-        subTitle=""
-        paragraph=<p>
-          Use the Yatri energy mobile app to schedule your home charging and find a public charging station. Sign up for
-          an account to enjoy exclusive, members-only public charging features and pricing.
-        </p>
-      />
-
-      <section
-        className="text-black reveal fade-bottom md:flex md:items-center md:justify-center bg-green-200"
-        ref={ref}
-      >
-        {inView ? (
+      <div className="body-container">
+        <section className="text-black md:flex md:items-center md:justify-center mt-20">
           <div className="md:flex">
-            <div className="mt-10 md:w-[30rem] md:m-20 md:pl-0 pl-10" transition-style="in:wipe:right">
-              <h1 className="text-6xl font-bold mb-4">Discover yatri energy app</h1>
-              <p className="leading-relaxed">
-                We make freedom of travel possible. <br />
-                Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-                Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by
-                end of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to
-                provide exceptional user experience.
-              </p>
+            <div className="md:flex md:items-start md:flex-col md:w-[40rem] md:h-[40rem]" ref={ref}>
+              {inView ? (
+                // <img
+                //   src="https://www.transparentpng.com/thumb/-iphone-x/jPIkq8-iphone-glass-lens-screen-replacement-fixez.png"
+                //   alt="Flat white phone iphone x screen"
+                //   className="h-full w-full object-contain drop-shadow-xl"
+                //   transition-style="in:wipe:left"
+                // />
+                <Image
+                  src={transparentIphone}
+                  alt="Flat white phone iphone x screen"
+                  className="h-full w-full object-contain drop-shadow-xl"
+                  transition-style="in:wipe:left"
+                />
+              ) : (
+                ''
+              )}
             </div>
-            <Image
-              src={mobileTemplate1}
-              alt="section-image-1"
-              className="md:w-[60rem] md:h-[30rem] object-cover border rounded-md reveal "
-              transition-style="in:wipe:left"
-            />
+            <div className="md:w-[30rem] md:my-40 md:mx-auto md:pl-0 pl-10" ref={ref2}>
+              {inView2 ? (
+                <div transition-style="in:wipe:right">
+                  <h1 className="text-6xl font-bold mb-4">Discover yatri energy app</h1>
+                  <p className="leading-relaxed">
+                    We make freedom of travel possible. <br />
+                    Yatri Energy’s vision for the future is an open charging network that is accessible to every EV
+                    users. Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast
+                    charger by end of 2022. Ultimately, our aim is to continuously expand our partner network in all
+                    geographies to provide exceptional user experience.
+                  </p>
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
           </div>
-        ) : (
-          'loading..'
-        )}
-      </section>
-      <Image
-        src={mobileTemplate2}
-        alt="section-image-1"
-        className="w-[30rem] h-[30rem] object-cover border rounded-md"
-      />
+        </section>
 
-      {/* third section  - Banner */}
-      <section className="text-black md:flex mt-10 " ref={ref2.ref}>
-        {ref2.inView ? (
-          <div className="md:flex md:items-center md:flex-col w-full" transition-style="in:circle:center">
-            <h1 className="text-4xl font-bold mb-4 text-center">Lorem Ispsum</h1>
-            <Image
-              src={mobileTemplate1}
-              alt="section-image-1"
-              className="w-full h-full border rounded-xl image3  circle-grow"
-            />
+        <section className="text-black mt-20 ">
+          <div className="w-full">
+            <h1 className="text-6xl font-bold mb-4 text-center">Lorem Ispsum</h1>
+            <p className="text-center">We make freedom of travel possible</p>
+            <div className="flex-center w-full my-0 mx-auto h-[50rem]" ref={ref3}>
+              {inView3 ? (
+                <>
+                  <Image
+                    src={appScreenshot1}
+                    alt="section-image-1"
+                    className=" lg:w-[20rem] lg:h-[40rem] md:w-[20rem] md:h-[40rem]  w-[25rem] h-[35rem] rounded-xl drop-shadow-xl md:pl-0 lg:pl-0 pl-20"
+                    transition-style="in:wipe:right"
+                  />
+                  <Image
+                    src={appScreenshot2}
+                    alt="section-image-1"
+                    className="lg:w-[20rem] lg:h-[40rem] md:w-[20rem] md:h-[40rem]  w-[25rem] h-[35rem] rounded-xl drop-shadow-xl -translate-x-20 translate-y-20 "
+                    transition-style="in:wipe:left"
+                  />
+                </>
+              ) : (
+                ''
+              )}
+            </div>
 
-            <div className="mt-10 md:w-[30rem] text-center">
+            <div className="mx-auto flex-center p-10  md:text-center flex-center">
               <p>
-                We make freedom of travel possible. <br />
                 Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
                 Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by
                 end of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to
@@ -109,62 +163,126 @@ const MobileAppPage = () => {
               </p>
             </div>
           </div>
-        ) : null}
-      </section>
-      {/* fourth section  */}
-      <section className="text-black mt-10 w-full">
-        <h1 className="text-4xl text-center font-bold mb-4">Lorem Ipsum</h1>
-        <div className="md:flex md:items-start md:p-10 md:justify-center">
-          <div className="mt-10 md:w-[30rem] reveal md:pr-10 fade-left ">
-            <p>
-              We make freedom of travel possible. <br />
-              Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-              Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-              of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-              exceptional user experience
-            </p>
-          </div>
-          <Image
-            src={sectionImage2}
-            alt="section-image-1"
-            className="w-[30rem] h-[30rem] object-cover border rounded-md"
-          />
-          <p className="md:w-[30rem] md:text-start md:pl-10 md:top-[15rem] reveal fade-right">
-            We make freedom of travel possible. <br />
-            Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-            Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-            of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-            exceptional user experience.
-          </p>
-        </div>
-      </section>
-      {/* fifth section -final */}
+        </section>
+        {/* fourth section  */}
+        <section className="text-black mt-20 w-full md:h-[58rem]">
+          <h1 className="text-6xl text-center font-bold mb-4 p-2">Title</h1>
 
-      <section className="text-black reveal fade-bottom mt-10">
-        <h1 className="text-4xl font-bold mb-4 text-center">Lorem Ipsum</h1>
-        <div className="mt-10 md:w-full md:flex md:justify-start md:items-center ">
-          <div className="mt-10 md:w-[30rem] md:m-20 md:pl-0 pl-10 ">
-            <h1 className="text-4xl font-bold mb-4 ">Discover yatri energy app</h1>
-            <p>
-              We make freedom of travel possible. <br />
-              Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
-              Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast charger by end
-              of 2022. Ultimately, our aim is to continuously expand our partner network in all geographies to provide
-              exceptional user experience.
-            </p>
-          </div>
-          <div className="md:flex md:items-start md:flex-col md:w-[30rem] md:h-[30rem] ">
+          <div className="w-full h-full">
             <Image
-              // src="https://www.transparentpng.com/thumb/-iphone-x/jPIkq8-iphone-glass-lens-screen-replacement-fixez.png"
-              src={mobileSingle}
-              alt="Flat white phone iphone x screen"
-              className="h-full w-full object-contain bg-red-900"
+              src={images[currentIndex]}
+              alt="section-image-1"
+              className="md:w-[full] border rounded-md my-0 mx-auto transition ease-in-out delay-150"
             />
+
+            <div
+              className="md:w-[20rem] my-10 mx-auto text-start md:-translate-y-[50rem] md:-translate-x-[30rem] md:p-0 p-10"
+              ref={ref4}
+            >
+              {inView4 ? (
+                <p transition-style="in:wipe:left">
+                  We make freedom of travel possible. <br />
+                  Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+                  Starting with 7 kW in-house developed AC chargers
+                </p>
+              ) : (
+                <p>
+                  We make freedom of travel possible. <br />
+                  Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+                  Starting with 7 kW in-house developed AC chargers
+                </p>
+              )}
+            </div>
+
+            <div
+              className="md:w-[20rem] my-10 mx-auto text-start md:-translate-y-[40rem] md:translate-x-[30rem] md:p-0 p-10"
+              ref={ref5}
+            >
+              {inView5 ? (
+                <p transition-style="in:wipe:right">
+                  We make freedom of travel possible. <br />
+                  Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+                  Starting with 7 kW in-house developed AC chargers
+                </p>
+              ) : (
+                <p>
+                  We make freedom of travel possible. <br />
+                  Yatri Energy’s vision for the future is an open charging network that is accessible to every EV users.
+                  Starting with 7 kW in-house developed AC chargers
+                </p>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+        </section>
+        {/* fifth section  */}
+
+        <section className="text-black md:flex md:items-center md:justify-center mt-20">
+          <div className="md:flex md:flex-row-reverse">
+            <div className="md:flex md:items-start md:flex-col md:w-[40rem] md:h-[40rem]" ref={ref6}>
+              {inView6 ? (
+                <Image
+                  src={transparentIphone}
+                  alt="Flat white phone iphone x screen"
+                  className="h-full w-full object-contain drop-shadow-xl"
+                  transition-style="in:wipe:left"
+                />
+              ) : null}
+            </div>
+            <div className="md:w-[30rem] md:my-40 md:mx-auto md:pl-0 pl-10" ref={ref6}>
+              {inView6 ? (
+                <div transition-style="in:wipe:right">
+                  <h1 className="text-6xl font-bold mb-4">Discover yatri energy app</h1>
+                  <p className="leading-relaxed">
+                    We make freedom of travel possible. <br />
+                    Yatri Energy’s vision for the future is an open charging network that is accessible to every EV
+                    users. Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast
+                    charger by end of 2022. Ultimately, our aim is to continuously expand our partner network in all
+                    geographies to provide exceptional user experience.
+                  </p>
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* sixth section  */}
+
+        <section className="text-black md:flex md:items-center md:justify-center mt-20">
+          <div className="md:flex">
+            <div className="md:flex md:items-start md:flex-col md:w-[40rem] md:h-[40rem]" ref={ref7}>
+              {inView7 ? (
+                <Image
+                  src={transparentIphone}
+                  alt="Flat white phone iphone x screen"
+                  className="h-full w-full object-contain drop-shadow-xl"
+                  transition-style="in:wipe:left"
+                />
+              ) : null}
+            </div>
+            <div className="md:w-[30rem] md:my-40 md:mx-auto md:pl-0 pl-10" ref={ref8}>
+              {inView8 ? (
+                <div transition-style="in:wipe:right">
+                  <h1 className="text-6xl font-bold mb-4">Discover yatri energy app</h1>
+                  <p className="leading-relaxed">
+                    We make freedom of travel possible. <br />
+                    Yatri Energy’s vision for the future is an open charging network that is accessible to every EV
+                    users. Starting with 7 kW in-house developed AC chargers, it will be complemented by 60 kW DC fast
+                    charger by end of 2022. Ultimately, our aim is to continuously expand our partner network in all
+                    geographies to provide exceptional user experience.
+                  </p>
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    </>
   );
 };
 

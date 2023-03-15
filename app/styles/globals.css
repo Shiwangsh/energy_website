@@ -55,6 +55,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.test {
+  /* animation: fade-in-out 1s ease-in-out; */
+  animation: fade-left 1s ease-in;
+}
+
 @layer components {
   .flex-center {
     @apply flex items-center justify-center;
@@ -67,6 +72,9 @@ body {
   } */
   .mobile-navbar {
     @apply bg-transparent w-full flex h-auto transition-all duration-200 ease-in-out;
+  }
+  .body-container {
+    @apply p-2.5 my-0 mx-auto;
   }
 }
 
@@ -124,15 +132,32 @@ body {
     opacity: 1;
   }
 }
-/* @keyframes circle-in-center {
-  from {
-    clip-path: circle(0%);
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
   }
-  to {
-    clip-path: circle(125%);
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-[transition-style='in:circle:center'] {
-  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
-} */
+@keyframes in-circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition-style='in:custom:circle-swoop'] {
+  --transition__duration: 5s;
+  animation-name: in-circle-swoop;
+}

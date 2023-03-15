@@ -5,7 +5,7 @@ import logo from '../public/assets/images/Yatri-energy-logo-secondary.png';
 
 const Footer = () => {
   return (
-    <footer className="mt-10 w-full bg-black border-8 rounded-2xl border-white overflow-hidden reveal fade-bottom">
+    <footer className="mt-10 w-full bg-black  rounded-lg overflow-hidden">
       <div className="md:flex md:items-start md:justify-evenly footer-container ">
         <div className="h-full -translate-y-12 md:w-56 ">
           <div className="">
